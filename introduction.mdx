@@ -1,0 +1,113 @@
+---
+title: Introduction to Yogesh Agrawal
+description: Welcome to Yogesh Agrawal's documentation platform. This page provides an overview of the platform, its key features, and how to navigate your documentation space.
+---
+
+<Callout kind="info" title="Starter Kit Template">
+  This documentation was generated as a starter kit template based on your brand. Please review and customize the content to accurately reflect your product's features, APIs, and capabilities.
+</Callout>
+
+## Overview
+
+Welcome to Yogesh Agrawal's documentation platform. You can organize, manage, and share all your project documentation in one centralized space. This platform helps you create structured docs, collaborate with teams, and keep everything up to date with version control and search capabilities.
+
+Use this space to document APIs, user guides, internal wikis, or any project-related knowledge. Start by customizing these pages to match your specific needs.
+
+## Key Features
+
+Discover the core capabilities that make Yogesh Agrawal's documentation platform powerful and user-friendly.
+
+<Columns cols={3}>
+  <Card title="Rich Editing" icon="edit-3" href="#rich-editing">
+    Create content with markdown, code blocks, and interactive components like tabs and steps.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Track changes, revert updates, and maintain history for all your documents.
+  </Card>
+  <Card title="Search & Navigation" icon="search" href="#search-navigation">
+    Find information quickly with full-text search and intuitive sidebar navigation.
+  </Card>
+</Columns>
+
+## Quick Start
+
+Get up and running in minutes with these essential steps.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at `https://docs.example.com/signup` using your email or GitHub account.
+  </Step>
+  <Step title="Set Up Space" icon="settings">
+    Create a new documentation space and configure your brand color (`#3B82F6`).
+  </Step>
+  <Step title="Add First Page" icon="plus">
+    Click "New Page" and start writing with markdown or import from GitHub.
+  </Step>
+  <Step title="Publish" icon="globe">
+    Preview changes and publish your docs for team access.
+  </Step>
+</Steps>
+
+## Navigation Guide
+
+Navigate your documentation space efficiently using these options.
+
+<Tabs>
+  <Tab title="Sidebar" icon="menu">
+    Use the left sidebar to browse pages, sections, and search results. Pin frequently used pages for quick access.
+  </Tab>
+  <Tab title="Search" icon="search">
+    Press `<kbd>Ctrl</kbd>+<kbd>K</kbd>` (or `<kbd>Cmd</kbd>+<kbd>K</kbd>` on macOS) to open global search across all docs.
+  </Tab>
+  <Tab title="Breadcrumbs" icon="chevron-right">
+    Follow the path at the top of each page to jump between parent sections quickly.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  Explore the [Quickstart](/quickstart) guide next to build your first custom page.
+</Callout>
+
+## Resources and Support
+
+Access helpful resources to extend your documentation.
+
+<ExpandableGroup>
+  <Expandable title="Community Forum" default-open="true">
+    Join discussions and ask questions at `https://community.example.com`.
+  </Expandable>
+  <Expandable title="API Documentation">
+    Integrate programmatically using our REST API at `https://api.example.com/docs`.
+  </Expandable>
+</ExpandableGroup>
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="book-open" href="/quickstart">
+    Dive into detailed setup instructions.
+  </Card>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your docs with API keys and OAuth.
+  </Card>
+</Columns>
+
+<CodeGroup tabs="Markdown,API">
+  ```markdown
+# My First Doc
+
+Welcome to your space!
+
+## Features
+
+- Easy editing
+- Search enabled
+  ```
+  ```javascript
+const response = await fetch('https://api.example.com/docs', {
+  headers: {
+    Authorization: `Bearer ${YOUR_API_KEY}`
+  }
+});
+const docs = await response.json();
+console.log(docs);
+  ```
+</CodeGroup>

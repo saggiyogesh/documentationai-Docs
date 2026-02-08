@@ -1,0 +1,171 @@
+---
+title: Changelog
+description: Track the latest updates, new features, and improvements in Yogesh Agrawal. Stay informed about version history.
+---
+
+## Recent Updates
+
+You can find the latest changes to Yogesh Agrawal here. Review release notes to understand new features, bug fixes, and breaking changes. Each release includes migration guidance when needed.
+
+<Callout kind="info">
+  Subscribe to our RSS feed or join the community Discord for instant update notifications.
+</Callout>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Added full-text search across all documentation pages with syntax highlighting support
+- Introduced dark mode toggle with automatic system preference detection
+- New version comparison tool for changelogs and API endpoints
+
+## Improvements
+
+- Enhanced page load performance by `>30%` through code splitting and lazy loading
+- Improved mobile responsiveness for sidebar navigation
+
+## Bug Fixes
+
+- Fixed collapsible sections not persisting state on page refresh
+- Resolved anchor link scrolling issues on long pages
+- Corrected table rendering glitches in certain browsers
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Integrated Mermaid diagram support for flowcharts and sequence diagrams
+- Added multi-language code block tabs with automatic language detection
+
+## Improvements
+
+- Redesigned search results page with preview snippets
+- Optimized image loading with WebP format support and lazy loading
+
+## Bug Fixes
+
+- Fixed broken external links in documentation previews
+- Patched sidebar collapse animation stuttering
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Launched core documentation platform with MDX component support
+- Implemented custom theming system using your brand color `#3B82F6`
+- Added API reference generator with automatic OpenAPI integration
+
+## Breaking Changes
+
+- Removed legacy shortcodes in favor of native MDX components
+- Updated configuration format from YAML to JSON
+
+## Initial Setup
+
+- First release with full starter kit template functionality
+
+</Update>
+
+## Version Summary
+
+| Version | Date       | Key Changes                  | Migration Required |
+|---------|------------|------------------------------|--------------------|
+| v1.2.0  | 2024-10-15 | Search, dark mode, perf     | No                 |
+| v1.1.0  | 2024-09-20 | Mermaid, code tabs          | No                 |
+| v1.0.0  | 2024-08-10 | Core platform launch        | Yes                |
+
+## Upcoming Features
+
+<Columns cols={2}>
+  <Card title="AI Search" icon="zap" href="#">
+    Semantic search powered by embeddings for smarter results.
+  </Card>
+  <Card title="Collaboration" icon="users" href="#">
+    Real-time editing and comments for team documentation.
+  </Card>
+  <Card title="Analytics" icon="bar-chart-3" href="#">
+    Page views, search trends, and engagement metrics.
+  </Card>
+  <Card title="Custom Domains" icon="globe" href="#">
+    Host your docs on your own domain with SSL.
+  </Card>
+</Columns>
+
+## Migration Guides
+
+<ExpandableGroup>
+  <Expandable title="Migrate from v0.x to v1.0.0" default-open="true">
+
+Follow these steps to update your documentation site:
+
+<Steps>
+  <Step title="Backup Config" icon="database">
+
+    Save your current configuration:
+
+````bash
+cp config.yaml config.yaml.backup
+````
+
+  </Step>
+  <Step title="Update Dependencies" icon="package">
+
+    Install the latest version:
+
+````bash
+npm install yogesh-agrawal-docs@latest
+````
+
+  </Step>
+  <Step title="Convert Shortcodes" icon="code">
+
+    Replace legacy shortcodes with MDX components. For example:
+
+    <CodeGroup tabs="Before,After">
+````jsx
+<!-- Before -->
+<Callout type="info">Note</Callout>
+````
+````jsx
+<!-- After -->
+<Callout kind="info">Note</Callout>
+````
+    </CodeGroup>
+
+  </Step>
+  <Step title="Test Locally" icon="play">
+
+    Run development server:
+
+````bash
+npm run dev
+````
+
+  </Step>
+</Steps>
+
+  </Expandable>
+
+  <Expandable title="Migrate from v1.0 to v1.1+">
+
+    Minimal changes required. Update your theme config to support new icons:
+
+````json
+{
+  "theme": {
+    "primaryColor": "#3B82F6",
+    "icons": "lucide"
+  }
+}
+````
+
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="tip" title="Need Help?">
+  Check the [community forum](https://discord.gg/example) or file an issue on GitHub for migration support.
+</Callout>

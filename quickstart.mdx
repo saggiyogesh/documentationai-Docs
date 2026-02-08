@@ -1,0 +1,164 @@
+---
+title: Getting Started with Yogesh Agrawal
+description: Set up your account and create your first documentation space in minutes. Follow these steps to begin organizing your project docs.
+---
+
+## Prerequisites
+
+<Callout kind="info" title="Before You Begin">
+Ensure you have:
+- A modern web browser (Chrome, Firefox, or Safari)
+- An email address for account verification
+- Optional: Existing Markdown files or GitHub repo for import
+</Callout>
+
+## Create Your Account
+
+Sign up in under 2 minutes to access your documentation space.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="monitor">
+    Navigate to `https://dashboard.yogeshagrawal.com/signup`.
+
+    Click **"Create Account"** and fill in your details.
+  </Step>
+
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for the verification email from Yogesh Agrawal.
+
+    Click the link to activate your account.
+  </Step>
+
+  <Step title="Set Password" icon="lock">
+    Return to the dashboard and set a strong password.
+
+    Enable two-factor authentication for added security.
+  </Step>
+</Steps>
+
+## Set Up Your First Documentation Space
+
+Organize your project docs with a dedicated space.
+
+<Steps>
+  <Step title="Create New Space" icon="folder-plus">
+    From the dashboard, click **"New Space"**.
+
+    Enter a name like `My Project Docs` and select a description.
+  </Step>
+
+  <Step title="Customize Settings" icon="settings">
+    Choose your brand color (`#3B82F6`) and default theme.
+
+    
+```json
+{
+  "name": "My Project Docs",
+  "color": "#3B82F6",
+  "theme": "light"
+}
+```
+    
+  </Step>
+
+  <Step title="Add First Page" icon="file-plus">
+    Click **"New Page"** and title it `Introduction`.
+
+    Start editing with the built-in Markdown editor.
+  </Step>
+</Steps>
+
+## Basic Interface Tour
+
+Explore the key areas of the Yogesh Agrawal interface.
+
+<Expandable title="Dashboard Overview" default-open="true">
+The dashboard shows your spaces, recent edits, and analytics.
+
+- **Spaces List**: Manage all your documentation spaces
+- **Quick Actions**: Create pages, import content, or search
+- **Activity Feed**: Track changes and collaborations
+</Expandable>
+
+<Expandable title="Editor Features">
+The Markdown editor includes:
+- Live preview
+- Syntax highlighting
+- Component insertion (like `<Callout>`)
+- Version history
+</Expandable>
+
+## Import Existing Content
+
+Bring in your docs from various sources quickly.
+
+<Tabs>
+  <Tab title="Markdown Files" icon="file-text">
+    Upload local files directly.
+
+    <CodeGroup tabs="Upload,API">
+````bash
+# Drag and drop .md files into the import panel
+````
+
+````javascript
+// Or use the API
+const formData = new FormData();
+formData.append('file', markdownFile);
+fetch('https://api.example.com/v1/spaces/{spaceId}/import', {
+  method: 'POST',
+  headers: { 'Authorization': 'Bearer YOUR_TOKEN' },
+  body: formData
+});
+````
+    </CodeGroup>
+  </Tab>
+
+  <Tab title="GitHub Repo" icon="github">
+    Connect your repo for automatic sync.
+
+    
+```yaml
+# Add to space settings
+source: github
+repo: owner/project-docs
+branch: main
+path: docs/
+```
+    
+  </Tab>
+
+  <Tab title="Google Docs" icon="file">
+    Paste Google Doc links for conversion.
+
+    Supports tables, images, and headings automatically.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+After importing, review pages for any formatting issues and publish your space.
+</Callout>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Customize Your Docs" icon="edit-3" href="/introduction">
+    Learn advanced editing and components.
+  </Card>
+
+  <Card title="Invite Collaborators" icon="users" href="#authentication">
+    Set up team access and permissions.
+  </Card>
+
+  <Card title="Publish & Share" icon="share-2" href="/configuration">
+    Make your docs public or embed them.
+  </Card>
+
+  <Card title="API Integration" icon="code" href="/authentication">
+    Automate with webhooks and APIs.
+  </Card>
+</Columns>
+
+<Callout kind="success">
+Congratulations! Your first documentation space is ready. Explore the interface and start documenting your projects.
+</Callout>
